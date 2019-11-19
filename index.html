@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <!-- <link rel="shortcut icon" href="new-google-favicon-512.png"> -->
+    <title>Crud frontend</title>
+</head>
+
+<body>
+
+    <section class="container">
+
+        <section class="conteudo">
+            <header>
+                <div>
+                    <h1>CRUD COM <span>JS</span></h1>
+                </div>
+                <div id="add">
+                    <div class="removeItem"> Remover Tudo</div>
+                    <div class="addItem">Adicionar Item</div>
+
+                </div>
+            </header>
+
+            <div class="conteudo-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="check box">
+                                    <span class="large material-icons">check_box_outline_blank </span>
+                                    <input type="checkbox">
+                                </div>
+                            </th>
+                            <th>Name</th>
+                            <th>E-mail</th>
+                            <th>Andress</th>
+                            <th>Fone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+    <!--/container-->
+
+    <section id="modal" class="container-modal">
+        <section class="modal">
+            <span id="fechar">X</span>
+            <form action="">
+                <div>
+                    <label for="">Name:
+                    </label>
+                    <input name="nome" type="text">
+                </div>
+                <div>
+                    <label for="">E-mail:
+                    </label>
+                    <input name="email" type="email">
+                </div>
+
+                <div>
+                    <label for="">Andress:
+                    </label>
+                    <input name="endereco" type="text">
+                </div>
+
+                <div>
+                    <label for="">Fone:
+                    </label>
+                    <input name="fone" type="text">
+                </div>
+                <div>
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </section>
+    </section>
+
+    <section class="container-remove">
+        <!-- <section class="container-remove-content"> -->
+        <div class="modal-remove">
+            <h3>Tem certeza que deseja remover todos os registros?</h3>
+            <div class="remove-item">
+                <span data-confirmacao="yes" class="yes">SIM</span>
+                <span data-confirmacao="not" class="not">NÃO</span>
+            </div>
+        </div>
+        <!-- </section> -->
+    </section>
+
+    <script src="scripts/getData.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/SalveData.js"></script>
+</body>
+
+</html>

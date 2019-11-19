@@ -1,0 +1,385 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ef135a;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.conteudo {
+    width: 950px;
+    box-shadow: 0px 0px 50px 0px #2626268c;
+}
+
+
+.conteudo header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#cc3a4a;
+    padding: 0 40px;
+    height: 70px;
+    color: whitesmoke;
+}
+
+.conteudo header h1 {
+    font-weight: lighter;
+    color: whitesmoke;
+}
+
+.conteudo header .addItem {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .4s;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+}
+
+.conteudo header .addItem:hover, .conteudo header .removeItem:hover {
+    background: whitesmoke;
+    color: #cc3a4a;
+}
+
+
+.conteudo header .removeItem {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .4s;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+}
+
+.conteudo table {
+    width: 100%;
+    text-align: center;    
+    border-collapse: collapse;
+    border: 1px solid whitesmoke;
+    background: whitesmoke;
+    font-size: 14px;
+
+}
+
+.conteudo table thead tr {
+    height: 60px;
+    border-bottom: 1px solid whitesmoke;
+    border-bottom: 2px solid #ccc;
+    color: #cc3b4a;
+}
+
+.conteudo table tr {
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 40px;
+    color: #cf5c69;
+    transition: .3s;
+}
+
+.conteudo table tbody tr:hover {
+    background: #eef0f3;
+}
+
+.conteudo .conteudo-table {
+    background: whitesmoke;
+    padding: 0 40px;
+}
+
+
+
+.conteudo input, type[checkbox] {
+    width: 15px;
+    height: 15px;
+    border: none;
+    /* opacity: 0; */
+    background: red;
+    border: 1px solid red;
+}
+.conteudo header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteudo header h1 span {
+    font-size: 13px;
+    color: #262626;
+    background: yellow;;
+    padding: 3px;
+    border-radius: 1.5px;
+    font-weight: bold;
+    margin-left: 5px;
+
+}
+
+/* ----------------------modal-------------------------- */
+
+.container-modal {
+   display: none;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh; 
+   z-index: 2000;
+   position: fixed;
+   top: 0px;
+   transition: .5s;
+}
+
+.container-modal.active {
+    display: flex;
+    background: #2626267c;
+
+}
+
+.container-modal .modal {
+    width: 400px;
+    height: 450px;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    transition: .5s;
+}
+
+.container-modal.active .modal {
+    animation: model .3s;
+}
+
+
+@keyframes model {
+    from {
+        opacity: 0;
+        transform: translate3d(0,-60px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+
+.container-modal .modal form input {
+    width: 300px;
+    height: 40px;
+    border:0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background: #ccc;
+    outline: none;
+    padding-left: 15px;
+    color: whitesmoke;
+    font-weight: bold;
+    color: #cc3a4a;
+}
+
+.container-modal .modal form input.valida {
+    border: 1px solid #cc3a4a;
+}
+
+.container-modal .modal form div label {
+    color: #cc3a4a;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.container-modal .modal form div {
+    display: flex;
+    flex-direction: column;
+} 
+
+.container-modal .modal form div button {
+    width: 300px;
+    height: 40px;
+    background: #cc3a4a;
+    color: whitesmoke;
+    border-radius: 5px;
+    font-weight: bold;
+    border:0;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.container-modal .modal form div button:hover {
+    border: 1px solid #cc3a4a;
+    color: #cc3a4a;
+    background: none;
+}
+
+
+.container-modal .modal span {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    display:   inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    background: whitesmoke;
+    color: #ef135a;
+    cursor: pointer;
+
+}
+
+
+/* --------------------------------------- */
+
+.conteudo-table  tr .check {
+    /* width: 40px; */
+    height: 40px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 0;
+}
+
+.conteudo-table  tr .check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.conteudo-table  tr .check.box {
+    transition: .2s;
+}
+
+.conteudo-table  tr .check.box:hover { 
+    transform: scale(1.3);
+    color: #ef135a;
+}
+
+.conteudo-table  tbody tr .check span.action {
+    transition: .2s;
+    cursor: pointer;
+}
+
+.conteudo-table  tbody tr .check span.action:hover {
+    transform: scale(1.3);
+    color: #ef135a;
+}
+
+#add {
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* ---------------mode Remove----------------- */
+
+.container-remove {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh; 
+    z-index: 3000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transition:  ease-in .2s;
+}
+
+.container-remove.active-remove {
+    display: flex;
+    background: #26262677;
+}
+
+
+
+@keyframes remove {
+    40% {
+        transform: translateX(60px);
+    }
+    
+    40% {
+        transform: translateX(-60px);
+    }
+
+    100% {
+        transform: translateX(60px);
+    }
+}
+
+
+
+
+.container-remove .modal-remove {
+    width: 480px;
+    height: 120px;
+    background: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    animation:  remove .5s;
+}
+
+.container-remove .modal-remove h3 {
+    font-weight: lighter;
+}
+
+.container-remove .modal-remove .remove-item {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-remove .modal-remove .remove-item span {
+    cursor: pointer;
+    transition: .3s;
+}
+.container-remove .modal-remove .remove-item span:hover {
+    transform: scale(1.1);
+}
+
+.container-remove .modal-remove .remove-item .yes {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #ef135a;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: lighter;
+}
+
+
+.container-remove .modal-remove .remove-item .not {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #ef135a;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: lighter;
+}
+
+
+
